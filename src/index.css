@@ -1,0 +1,117 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/fonts/Axiforma-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/fonts/Axiforma-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/fonts/Axiforma-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 160 49% 98%;
+    --foreground: 170 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 170 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 170 30% 12%;
+
+    --primary: 161 100% 44%;
+    --primary-foreground: 170 45% 9%;
+
+    --secondary: 166 43% 45%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 164 20% 94%;
+    --muted-foreground: 170 10% 40%;
+
+    --accent: 170 25% 55%;
+    --accent-foreground: 170 45% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 165 20% 85%;
+    --input: 165 20% 85%;
+    --ring: 161 100% 44%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 170 45% 9%;
+    --sidebar-foreground: 164 20% 94%;
+    --sidebar-primary: 161 100% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 170 25% 20%;
+    --sidebar-accent-foreground: 164 20% 94%;
+    --sidebar-border: 170 25% 20%;
+    --sidebar-ring: 161 100% 44%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-axiforma;
+  }
+}
+
+@layer components {
+  .search-container {
+    @apply relative w-full max-w-3xl mx-auto transition-all duration-300;
+  }
+  
+  .search-input {
+    @apply w-full py-3 px-5 bg-white border-2 border-bangladesh-green rounded-full
+    focus:outline-none focus:ring-2 focus:ring-caribbean-green focus:border-caribbean-green
+    text-lg shadow-md transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-caribbean-green hover:bg-mountain-meadow text-dark-green font-medium py-2 px-6 rounded-lg
+    transition-colors duration-300 shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-mountain-meadow hover:bg-mint text-dark-green font-medium py-2 px-6 rounded-lg
+    transition-colors duration-300 shadow-sm;
+  }
+  
+  .card-base {
+    @apply bg-white rounded-lg shadow-md overflow-hidden border border-pistachio hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .card-highlight {
+    @apply bg-gradient-to-br from-anti-flash-white to-pistachio/20 rounded-lg shadow-md overflow-hidden border border-pistachio hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold text-bangladesh-green mb-4;
+  }
+  
+  .subsection-title {
+    @apply text-xl font-medium text-forest mb-3;
+  }
+}
